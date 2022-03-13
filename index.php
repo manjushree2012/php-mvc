@@ -5,8 +5,6 @@
 
 	$app = new Application();
 
-	$router = new Router();
-
 	$app->router->get('/', function() {
 		return 'Hello world';
 	});
