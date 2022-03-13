@@ -1,0 +1,15 @@
+{
+    "name": "manjushreeroshan/php-mvc",
+    "autoload": {
+        "psr-4": {
+          "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Roshan Adhikari",
+            "email": "manjushreeroshan@gmail.com"
+        }
+    ],
+    "require": {}
+}
