@@ -24,10 +24,18 @@
       $callback = $this->routes[$method][$path] ?? false;
 
       if($callback === false) {
-        echo "404";
-        exit;
+        return "404";
       }
-      echo call_user_func($callback);
+
+      if(is_string($callback)) {
+        return $this->renderView($callback);
+      }
+      return call_user_func($callback);
+    }
+
+    public function renderView($view)
+    {
+      include_once __DIR__."/../views/$view.php";
     }
 
   }
