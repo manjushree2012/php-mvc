@@ -21,7 +21,13 @@
     {
       $path = $this->request->getPath();
       $method = $this->request->getMethod();
-      echo $method;
+      $callback = $this->routes[$method][$path] ?? false;
+
+      if($callback === false) {
+        echo "404";
+        exit;
+      }
+      echo call_user_func($callback);
     }
 
   }

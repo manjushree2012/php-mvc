@@ -9,6 +9,10 @@
 		return 'Hello world';
 	});
 
+	$app->router->get('/contact', function() {
+		return 'Contact us';
+	});
+
 	$app->run();
 
 ?>
