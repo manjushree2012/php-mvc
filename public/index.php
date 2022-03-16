@@ -5,9 +5,7 @@
 
 	$app = new Application();
 
-	$app->router->get('/', function() {
-		return 'Hello world';
-	});
+	$app->router->get('/home', 'home');
 
 	$app->router->get('/contact', 'contact');
 

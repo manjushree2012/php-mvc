@@ -1,1 +1,3 @@
-<h1> Contact </h1>
+<?php
+?>
+<h1> Contact us </h1>
