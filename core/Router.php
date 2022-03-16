@@ -41,7 +41,7 @@
 
     public function layoutContent()
     {
-        include_once __DIR__."/../views/$view.php";
+        // include_once __DIR__."/../views/$view.php";
     }
 
   }
