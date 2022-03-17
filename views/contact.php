@@ -1,3 +1,4 @@
+<?php echo "Welcome to the home page $name. This is an interpolated string"; ?>
 <h1> Contact us </h1>
 
 <form action="" method="POST" >
