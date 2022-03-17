@@ -1,20 +1,22 @@
 <?php
-  namespace app\core;
+namespace app\core;
 
-  class Application
-  {
+class Application
+{
+    public static string $ROOT_DIR;
     public Router $router;
     public Request $request;
 
-    public function __construct()
+    public function __construct($rootPath)
     {
-      $this->request = new Request();
-      $this->router = new Router($this->request);
+        self::$ROOT_DIR = $rootPath;
+        $this->request = new Request();
+        $this->router = new Router($this->request);
     }
 
     public function run()
     {
-      echo $this->router->resolve();
+        echo $this->router->resolve();
     }
 
-  }
+}
