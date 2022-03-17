@@ -18,6 +18,11 @@
       $this->routes['get'][$path] = $callback;
     }
 
+    public function post($path, $callback)
+    {
+      $this->routes['post'][$path] = $callback;
+    }
+
     //determine incoming request and resolve accordingly
     public function resolve()
     {
