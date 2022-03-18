@@ -2,22 +2,23 @@
 namespace app\controllers;
 
 use app\core\Application;
+use app\core\Controller;
 
-class SiteController
+class SiteController extends Controller
 {
     //get method
-    public static function contact()
+    public function contact()
     {
         $params = [
             'name' => 'Aashish',
             'address' => 'Banepa'
         ];
-        return Application::$app->router->renderView('contact', $params);
+        return $this->render('contact', $params);
         return 'inside get method of contact';
     }
 
     //post method
-    public static function handleContact()
+    public function handleContact()
     {
         return 'Handling submitted data here ...';
     }

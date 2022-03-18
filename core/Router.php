@@ -38,6 +38,9 @@
       if(is_string($callback)) {
         return $this->renderView($callback);
       }
+      if(is_array($callback)) {
+          $callback[0] = new $callback[0]();
+      }
       return call_user_func($callback);
     }
 
