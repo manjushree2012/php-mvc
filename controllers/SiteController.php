@@ -3,6 +3,7 @@ namespace app\controllers;
 
 use app\core\Application;
 use app\core\Controller;
+use app\core\Request;
 
 class SiteController extends Controller
 {
@@ -18,8 +19,11 @@ class SiteController extends Controller
     }
 
     //post method
-    public function handleContact()
+    public function handleContact(Request $request)
     {
+        //access request instance
+        $body = $request->getBody();
+        var_dump($body);
         return 'Handling submitted data here ...';
     }
 
