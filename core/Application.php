@@ -22,12 +22,13 @@ class Application
 
     public function getController()
     {
+        return $this->controller;
 
     }
 
-    public function setController($controller)
+    public function setController($controller): void
     {
-
+        $this->controller = $controller;
     }
 
     public function run()
